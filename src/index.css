@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+    @apply bg-parchment-light text-estate-800 antialiased selection:bg-gold-light selection:text-estate-950;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer components {
+  /* Vineyard Luxury Button - Primary */
+  .btn-luxury-gold {
+    @apply relative inline-flex items-center justify-center px-7 py-3.5 
+           text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300
+           bg-gradient-to-r from-gold-dark via-gold to-gold-dark text-estate-950
+           border border-gold-light/40 rounded-none shadow-gold hover:shadow-lg
+           hover:brightness-110 active:scale-[0.98];
+  }
+
+  /* Vineyard Luxury Button - Ghost/Outline */
+  .btn-luxury-outline {
+    @apply relative inline-flex items-center justify-center px-7 py-3.5 
+           text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300
+           bg-transparent text-gold-light border border-gold/50 rounded-none
+           hover:bg-gold/10 hover:border-gold active:scale-[0.98];
+  }
+
+  /* Vineyard Dark Button */
+  .btn-luxury-dark {
+    @apply relative inline-flex items-center justify-center px-7 py-3.5 
+           text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300
+           bg-estate-900 text-gold-shimmer border border-gold/40 rounded-none
+           hover:bg-estate-800 hover:border-gold hover:shadow-gold active:scale-[0.98];
+  }
+
+  /* Card Styles */
+  .card-vineyard-dark {
+    @apply relative bg-estate-900/90 backdrop-blur-md border border-gold/20 
+           transition-all duration-500 hover:border-gold/50 hover:shadow-estate;
+  }
+
+  .card-vineyard-light {
+    @apply relative bg-white/95 backdrop-blur-sm border border-stone-200/80 
+           transition-all duration-500 hover:border-gold/60 hover:shadow-xl;
+  }
+
+  .section-tag {
+    @apply inline-block text-[11px] font-semibold tracking-[0.28em] uppercase text-gold-dark;
+  }
+
+  .section-heading-dark {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-parchment-light leading-[1.15];
+  }
+
+  .section-heading-light {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-estate-950 leading-[1.15];
+  }
+
+  .gold-divider {
+    @apply w-12 h-[1px] bg-gold/60 mx-auto my-4;
+  }
+
+  .gold-divider-left {
+    @apply w-12 h-[1px] bg-gold/60 my-4;
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #0B0F19; }
+::-webkit-scrollbar-thumb { background: #9E7E56; border-radius: 0px; }
+::-webkit-scrollbar-thumb:hover { background: #C5A880; }
