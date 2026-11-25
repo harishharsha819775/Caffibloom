@@ -65,13 +65,13 @@ const Navbar: React.FC = () => {
               </div>
             </Link>
 
-            {/* Desktop Menu with generous spacing from Brand Logo */}
-            <div className="hidden lg:flex items-center space-x-6 xl:space-x-7 ml-8 lg:ml-12 lg:pl-8 lg:border-l lg:border-gold/20">
+            {/* Desktop Menu with balanced spacing from Brand Logo */}
+            <div className="hidden lg:flex items-center space-x-3.5 xl:space-x-6 lg:ml-5 xl:ml-10 lg:pl-5 xl:pl-8 lg:border-l lg:border-gold/20">
               {links.map((l) => (
                 <Link
                   key={l.to}
                   to={l.to}
-                  className={`text-xs uppercase tracking-[0.16em] whitespace-nowrap transition-all duration-200 relative py-1 ${
+                  className={`text-[11px] xl:text-xs uppercase tracking-[0.1em] xl:tracking-[0.15em] whitespace-nowrap transition-all duration-200 relative py-1 ${
                     isActive(l.to)
                       ? 'text-gold font-semibold'
                       : 'text-parchment-light/80 hover:text-gold-light'
@@ -89,10 +89,10 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Right CTAs with refined spacing from Contact */}
-            <div className="flex items-center space-x-4 ml-6 lg:ml-10 lg:pl-6 lg:border-l lg:border-gold/20">
+            <div className="flex items-center space-x-3 xl:space-x-4 shrink-0 lg:ml-5 xl:ml-8 lg:pl-5 xl:pl-6 lg:border-l lg:border-gold/20">
               <Link
                 to="/products"
-                className="hidden sm:inline-flex btn-luxury-gold text-[10px] py-2.5 px-5 whitespace-nowrap"
+                className="hidden sm:inline-flex btn-luxury-gold text-[10px] py-2.5 px-4 xl:px-5 whitespace-nowrap"
               >
                 Shop The Blends
               </Link>

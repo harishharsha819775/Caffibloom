@@ -14,7 +14,7 @@ import Checkout from './pages/Checkout'
 import BehindInnovation from './pages/BehindInnovation'
 
 const App: React.FC = () => (
-  <div className="flex flex-col min-h-screen">
+  <div className="flex flex-col min-h-screen w-full overflow-x-clip">
     <Navbar />
     <main className="flex-grow">
       <Routes>
